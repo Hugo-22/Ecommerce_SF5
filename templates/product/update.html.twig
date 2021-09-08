@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un produit{% endblock %}
+
+{% block body %}
+    <h1>Modification d'un produit</h1>
+
+    {{ form_start(form) }}
+
+    {{ form_errors(form) }}
+
+    <div class="row">
+        <div class="col">
+            {{ form_row(form.name) }}
+            {{ form_row(form.price) }}
+            {{ form_row(form.picture) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.description) }}
+            {{ form_row(form.category) }}
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary mt-3">
+        <i class="fas fa-save"></i>
+        Modifier le produit
+    </button>
+
+    {{ form_end(form) }}
+
+{% endblock %}
